@@ -1,15 +1,21 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
+    "target": "es2015",
+    "module": "CommonJS",
+    "noImplicitAny": true,
+    "sourceMap": false,
+    "baseUrl": "./src",
+    "lib": ["scripthost", "es2018.promise", "esnext"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true
-  }
+    "emitDecoratorMetadata": true,
+    "outDir": "dist",
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
 }
